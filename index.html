@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Crossword</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<div class="input-section">
+			<input
+				type="text"
+				id="words"
+				placeholder="Enter words, separated by commas"
+				value="Ashley,Bryan,Lucy"
+				onkeypress="if(event.key === 'Enter') generate()"
+			/>
+			<button onclick="generate()" id="generateBtn" title="Press G to generate">
+				Generate (G)
+			</button>
+			<button onclick="reset()" id="resetBtn" title="Press R to reset">
+				Reset (R)
+			</button>
+			<button
+				onclick="generateRandom()"
+				id="randomBtn"
+				title="Press N for random words"
+			>
+				Random Words (N)
+			</button>
+		</div>
+		<div id="board" class="board"></div>
+		<script src="index.js"></script>
+	</body>
+</html>
